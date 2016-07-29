@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:background="#8c8c8e"
+          android:gravity="top|center"
+          android:padding="16dp"
+          android:text="I'm a TextView"
+          android:textColor="#f5f3f3"
+          android:textSize="32sp"
+          app:decorTypefaceAsset="Ubuntu-M.ttf"
+          tools:ignore="MissingPrefix"/>
