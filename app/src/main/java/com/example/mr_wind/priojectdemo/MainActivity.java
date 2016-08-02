@@ -1,10 +1,17 @@
 package com.example.mr_wind.priojectdemo;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.webkit.WebView;
+import android.widget.Button;
+
+import com.example.mr_wind.priojectdemo.activity.RecyclerViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MainActivity extends BaseActivity {
@@ -19,12 +26,15 @@ public class MainActivity extends BaseActivity {
     List<String> mStringList2 = new ArrayList<>();
 
     List<String> mStringList3 = new ArrayList<>();
+    @BindView(R.id.recycle_btn)
+    Button mRecycleBtn;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
 
 
         for (int i = 0; i < 20; i++) {
@@ -49,4 +59,9 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    @OnClick(R.id.recycle_btn)
+    public void onClick() {
+        Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+        startActivity(intent);
+    }
 }
