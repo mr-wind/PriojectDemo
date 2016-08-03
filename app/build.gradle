@@ -51,7 +51,10 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-gson:2.1.0'
     compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
 
-    //修改字体
+    //在xml中修改字体
     compile 'com.mounacheikhna:decor:0.2.4'
     compile 'com.mounacheikhna:decorators:0.2.4'
+
+    //HTextView（轮播特效文本框）
+    compile 'hanks.xyz:htextview-library:0.1.5'
 }

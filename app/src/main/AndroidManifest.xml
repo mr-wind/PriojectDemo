@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RecyclerViewActivity"/>
+        <activity android:name=".activity.HTextViewActivity"/>
     </application>
 
 </manifest>

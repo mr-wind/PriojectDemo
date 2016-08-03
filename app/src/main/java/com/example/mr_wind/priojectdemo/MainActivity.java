@@ -2,8 +2,10 @@ package com.example.mr_wind.priojectdemo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
+import com.example.mr_wind.priojectdemo.activity.HTextViewActivity;
 import com.example.mr_wind.priojectdemo.activity.RecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -28,7 +30,8 @@ public class MainActivity extends BaseActivity {
     List<String> mStringList3 = new ArrayList<>();
     @BindView(R.id.recycle_btn)
     Button mRecycleBtn;
-
+    @BindView(R.id.htext_btn)
+    Button mHtextBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,9 +62,17 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick(R.id.recycle_btn)
-    public void onClick() {
-        Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
-        startActivity(intent);
+    @OnClick({R.id.recycle_btn, R.id.htext_btn})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.recycle_btn:
+                Intent intent = new Intent(MainActivity.this, RecyclerViewActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.htext_btn:
+                Intent intent1 = new Intent(MainActivity.this, HTextViewActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 }
