@@ -57,4 +57,7 @@ dependencies {
 
     //HTextView（轮播特效文本框）
     compile 'hanks.xyz:htextview-library:0.1.5'
+
+    //MaterialDesign的输入框
+    compile 'com.github.florent37:materialtextfield:1.0.6'
 }

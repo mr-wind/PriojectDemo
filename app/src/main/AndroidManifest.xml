@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".activity.RecyclerViewActivity"/>
         <activity android:name=".activity.HTextViewActivity"/>
+        <activity android:name=".activity.MdEditfieldActivity"/>
     </application>
 
 </manifest>

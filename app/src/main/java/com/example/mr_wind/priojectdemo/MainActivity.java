@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.mr_wind.priojectdemo.activity.HTextViewActivity;
+import com.example.mr_wind.priojectdemo.activity.MdEditfieldActivity;
 import com.example.mr_wind.priojectdemo.activity.RecyclerViewActivity;
 
 import java.util.ArrayList;
@@ -32,6 +33,8 @@ public class MainActivity extends BaseActivity {
     Button mRecycleBtn;
     @BindView(R.id.htext_btn)
     Button mHtextBtn;
+    @BindView(R.id.mdedit_btn)
+    Button mMdeditBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,7 +65,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.recycle_btn, R.id.htext_btn})
+    @OnClick({R.id.recycle_btn, R.id.htext_btn, R.id.mdedit_btn})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.recycle_btn:
@@ -72,6 +75,10 @@ public class MainActivity extends BaseActivity {
             case R.id.htext_btn:
                 Intent intent1 = new Intent(MainActivity.this, HTextViewActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.mdedit_btn:
+                Intent intent2 = new Intent(MainActivity.this, MdEditfieldActivity.class);
+                startActivity(intent2);
                 break;
         }
     }

@@ -55,15 +55,21 @@
 
             <Button
                 android:id="@+id/recycle_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="To RecyclerViewDemo"/>
 
             <Button
                 android:id="@+id/htext_btn"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="To HTextViewDemo"/>
+
+            <Button
+                android:id="@+id/mdedit_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To MDEdit"/>
         </LinearLayout>
 
     </lib.homhomlib.design.SlidingLayout>
