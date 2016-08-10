@@ -8,6 +8,7 @@ import android.widget.Button;
 import com.example.mr_wind.priojectdemo.activity.HTextViewActivity;
 import com.example.mr_wind.priojectdemo.activity.MdEditfieldActivity;
 import com.example.mr_wind.priojectdemo.activity.RecyclerViewActivity;
+import com.example.mr_wind.priojectdemo.activity.RetrofitActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +66,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.recycle_btn, R.id.htext_btn, R.id.mdedit_btn})
+    @OnClick({R.id.recycle_btn, R.id.htext_btn, R.id.mdedit_btn, R.id.retrofit_btn})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.recycle_btn:
@@ -79,6 +80,10 @@ public class MainActivity extends BaseActivity {
             case R.id.mdedit_btn:
                 Intent intent2 = new Intent(MainActivity.this, MdEditfieldActivity.class);
                 startActivity(intent2);
+                break;
+            case R.id.retrofit_btn:
+                Intent intent3 = new Intent(MainActivity.this, RetrofitActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

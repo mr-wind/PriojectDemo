@@ -28,6 +28,11 @@ public class BaseActivity extends SwipeBackActivity {
         }
     }
 
+    /**
+     * 修饰换字体
+     *
+     * @param newBase
+     */
     @Override
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(DecorContextWrapper.wrap(newBase).with(Decorators.getAll()));
