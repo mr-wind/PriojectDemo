@@ -54,6 +54,12 @@
                 android:visibility="gone"/>
 
             <Button
+                android:id="@+id/open_other_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Open Other App"/>
+
+            <Button
                 android:id="@+id/recycle_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -76,6 +82,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="To Retrofit"/>
+
+            <Button
+                android:id="@+id/float_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="To Float"/>
+
+
         </LinearLayout>
 
     </lib.homhomlib.design.SlidingLayout>

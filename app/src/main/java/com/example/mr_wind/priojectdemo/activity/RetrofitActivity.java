@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -114,6 +115,6 @@ public class RetrofitActivity extends BaseActivity {
                 .subscribe(observer);
 
         Log.d("tag", "" + mMdeditField.getEditText().toString());
-
     }
+
 }

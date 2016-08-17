@@ -1,14 +1,21 @@
 package com.example.mr_wind.priojectdemo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Display;
+import android.view.Gravity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.mr_wind.priojectdemo.activity.HTextViewActivity;
 import com.example.mr_wind.priojectdemo.activity.MdEditfieldActivity;
 import com.example.mr_wind.priojectdemo.activity.RecyclerViewActivity;
 import com.example.mr_wind.priojectdemo.activity.RetrofitActivity;
+import com.example.mr_wind.priojectdemo.service.FloatService;
+import com.example.mr_wind.priojectdemo.utils.APKUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,7 +73,7 @@ public class MainActivity extends BaseActivity {
 
     }
 
-    @OnClick({R.id.recycle_btn, R.id.htext_btn, R.id.mdedit_btn, R.id.retrofit_btn})
+    @OnClick({R.id.recycle_btn, R.id.htext_btn, R.id.mdedit_btn, R.id.retrofit_btn, R.id.float_btn, R.id.open_other_btn})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.recycle_btn:
@@ -84,6 +91,14 @@ public class MainActivity extends BaseActivity {
             case R.id.retrofit_btn:
                 Intent intent3 = new Intent(MainActivity.this, RetrofitActivity.class);
                 startActivity(intent3);
+                break;
+            case R.id.float_btn:
+                Intent intent4 = new Intent(MainActivity.this, FloatService.class);
+                startService(intent4);
+                //finish();
+                break;
+            case R.id.open_other_btn:
+                APKUtil.startOtherApp(getApplicationContext(), "com.dsplayer");
                 break;
         }
     }

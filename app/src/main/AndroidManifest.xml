@@ -2,14 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.example.mr_wind.priojectdemo">
 
-
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/DialogTheme">
         <activity
             android:name=".MainActivity">
             <intent-filter>
@@ -19,9 +21,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.RecyclerViewActivity"/>
-        <activity android:name=".activity.HTextViewActivity"/>
+        <activity
+            android:name=".activity.HTextViewActivity"
+            android:theme="@style/DialogTheme"/>
         <activity android:name=".activity.MdEditfieldActivity"/>
         <activity android:name=".activity.RetrofitActivity"/>
+
+        <service android:name=".service.FloatService"/>
     </application>
 
 </manifest>
